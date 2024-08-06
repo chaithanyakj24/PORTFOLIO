@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHAITHANYA K J</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+        }
+
+        nav {
+            top: 0;
+            width: 100%;
+            position: fixed;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(18, 18, 62);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        .left {
+            font-size: 1.75rem;
+            font-style: italic;
+            /* Makes the text italic */
+            font-weight: bold;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(153, 153, 216);
+            font-size: 1.01rem;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 110px 0;
+        }
+
+        .firstSection>div {
+            width: 30%;
+        }
+
+        .leftSection {
+            font-size: 2.95rem;
+
+        }
+
+        .rightSection img {
+            width: 80%;
+        }
+
+        .purple {
+            color: rgb(170, 107, 228);
+        }
+
+        #element {
+            color: rgb(113, 96, 197);
+        }
+
+        .secondSection {
+            max-width: 80vw;
+            margin: auto;
+        }
+
+        h1 {
+            font-size: 3em;
+        }
+
+        .secondSection p {
+            font-size: 1.36em;
+            /* Increased font size */
+            text-align: justify;
+            line-height: 1.8;
+        }
+
+        .thirdSection {
+            max-width: 80vw;
+            margin: auto;
+        }
+
+        main hr {
+            border: 0;
+            background: #8784be;
+            height: 1.2px;
+            margin: 50px 84px;
+        }
+
+        .highlight {
+            color: #00c896;
+        }
+
+        a {
+            text-decoration: none;
+            color: #00c896;
+        }
+
+        .college-name {
+            color: rgb(210, 138, 55);
+        }
+
+        .contact-boxes {
+            display: flex;
+            justify-content: center;
+            gap: 70px;
+            /* Increased space between the boxes */
+            margin: 40px 0;
+        }
+
+        .contact-box {
+            background-color: rgb(30, 30, 105);
+            border: 1px solid #02a078;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            width: 200px;
+            color: white;
+        }
+
+        .contact-box a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-box a:hover {
+            color: #00c896;
+        }
+
+        .contact-box img {
+            width: 24px;
+            margin-right: 10px;
+        }
+
+        footer {
+            background-color: #08082e;
+        }
+
+        .footer {
+            display: flex;
+            padding: 23px 122px;
+            justify-content: space-evenly;
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer>div {
+            width: 223px;
+        }
+
+        .footer-rights {
+            text-align: center;
+            color: gray;
+            padding: 12px 0;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .footer-links a:hover {
+            color: #00c896;
+        }
+
+        .footer-buttons a {
+            text-decoration: none;
+            color: white;
+            background-color: #02a078;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: block;
+            text-align: center;
+        }
+
+        .footer-buttons a:hover {
+            background-color: #00c896;
+        }
+
+        /* Projects and Achievements Section */
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .project-box,
+        .achievement-box {
+            background-color: rgb(18, 18, 62);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s;
+            border: 1px solid #ddd;
+            color: white;
+        }
+
+        .project-box:hover,
+        .achievement-box:hover {
+            transform: translateY(-10px);
+        }
+
+        .project-box img,
+        .achievement-box img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .project-box h2,
+        .achievement-box h4 {
+            margin: 15px 0;
+            font-size: 1.5rem;
+        }
+
+        .project-box p,
+        .achievement-box p {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        #projects-achievements {
+            margin: 20px;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .projects,
+        .achievements {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        /* Popup Form Styles */
+        .popup-form {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgb(7, 7, 53);
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+        }
+
+        .popup-form.active {
+            display: block;
+        }
+
+        .popup-form h2 {
+            margin-bottom: 15px;
+            color: rgb(61, 61, 134);
+        }
+
+        .popup-form label {
+            display: block;
+            margin-bottom: 5px;
+            color: rgb(255, 255, 255);
+        }
+
+        .popup-form input,
+        .popup-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .popup-form button {
+            background-color: #02a078;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .popup-form button:hover {
+            background-color: #00c896;
+        }
+
+        .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+
+        .popup-overlay.active {
+            display: block;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: rgb(18, 18, 62);
+    }
+
+    nav ul.showing {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .menu-toggle span {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 4px 0;
+        transition: 0.3s;
+    }
+
+    .firstSection {
+        margin-top: 80px;
+        text-align: center;
+    }
+
+    .leftSection {
+        font-size: 2rem;
+    }
+
+    .rightSection img {
+        width: 100px;
+        border-radius: 50%;
+        margin: 20px 0;
+    }
+
+    .contact-boxes {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin: 20px 0;
+    }
+
+    .contact-box {
+        width: 45%;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .leftSection {
+        font-size: 1.5rem;
+    }
+
+    .contact-box {
+        width: 100%;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">CHAITHANYA K J</div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#" id="connectButton">Connect</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                Namaste, My name is <span class="purple">Chaithanya K J</span>,
+                <div> and I am a passionate</div>
+                <span id="element"></span>
+            </div>
+            <div class="rightSection">
+                <img src="developer.png" alt="">
+            </div>
+        </section>
+        <hr>
+        <section class="secondSection" id="about">
+            <h1>About Me</h1>
+            <p>
+                A passionate <span class="highlight">Web Developer</span> with a strong foundation in web development
+                and programming. Currently pursuing a Bachelor of Engineering in Computer Science at
+                <a href="https://www.sahyadri.edu.in/" target="_blank" class="college-name">Sahyadri College of
+                    Engineering and Management, Mangaluru</a>.
+                I have developed a keen interest in improving my skills in <span class="highlight">HTML, CSS,
+                    JavaScript, Bootstrap, Tailwind, MongoDB, FireBase</span> and more.
+                I am always eager to learn and take on new challenges, striving to create innovative solutions that
+                enhance user experiences. My journey in web development has led me to work on various projects, ranging
+                from simple websites to complex web applications. I am particularly interested in the intersection of
+                technology and design, and I enjoy creating user-centric solutions that not only function seamlessly but
+                also offer a visually appealing experience.
+                <br><br>
+                Feel free to explore my portfolio and get in touch if you'd like to collaborate on a project or discuss
+                potential opportunities. I am excited about the possibilities that lie ahead and look forward to
+                connecting
+                with like-minded individuals.
+            </p>
+        </section>
+        <section class="contact-boxes" id="connect">
+            <div class="contact-box">
+                <a href="mailto:chaithanhakj002@gmail.com">
+                    <img src="https://img.icons8.com/ios-filled/50/ffffff/new-post.png" alt="Email Icon">
+                    Email
+                </a>
+            </div>
+            <div class="contact-box">
+                <a href="https://github.com/chaithanyakj24" target="_blank">
+                    <img src="https://img.icons8.com/ios-filled/50/ffffff/github.png" alt="GitHub Icon">
+                    GitHub
+                </a>
+            </div>
+            <div class="contact-box">
+                <a href="https://www.linkedin.com/in/chaithanya-k-j-075137229/" target="_blank">
+                    <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn Icon">
+                    LinkedIn
+                </a>
+            </div>
+            <div class="contact-box">
+                <a href="https://drive.google.com/file/d/19kMLEAvpzT_xGmHpJ_9xoSTbgC3IVs8q/view?usp=drive_link"
+                    target="_blank">
+                    <img src="https://img.icons8.com/ios-filled/50/ffffff/resume.png" alt="Resume Icon">
+                    Resume
+                </a>
+            </div>
+        </section>
+        <hr>
+        <section class="thirdSection" id="projects">
+            <h1>Projects and Achievements</h1>
+            <section id="projects-achievements">
+                <h2>Projects</h2>
+                <div class="projects-container">
+                    <div class="project-box">
+                        <img src="project1.png" alt="Project 1">
+                        <h2>Job Placement Prediction Using Machine Learning</h2>
+                        <p>Designed and implemented a machine learning model to accurately predict job placement
+                            outcomes based on
+                            individual data.
+                            Created an intuitive user interface that allows users to input information regarding their
+                            academic achievements for prediction purposes.</p>
+                        <div class="icons">
+                            <a href="https://github.com/chaithanyakj24/PREDICTION" target="_blank">
+                                <img src="https://img.icons8.com/ios-filled/50/ffffff/github.png" alt="GitHub Icon">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-box">
+                        <img src="project2.png" alt="Project 2">
+                        <h2>Department Resources and Activities Management System</h2>
+                        <p>Developed a web application to manage and track department resources and activities, focusing
+                            on seminars,
+                            webinars, workshops, and skill labs. Enables users to access information about the
+                            attendees, faculty coordinators, resource persons and the students
+                            can also view their progress.</p>
+                        <div class="icons">
+                            <a href="https://github.com/chaithanyakj24/DBMS-PROJECT" target="_blank">
+                                <img src="https://img.icons8.com/ios-filled/50/ffffff/github.png" alt="GitHub Icon">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <h2>Achievements</h2>
+                <div class="projects-container">
+                    <div class="achievement-box">
+                        <img src="cert1.png" alt="Certificate 1">
+                        <h4>Internship</h4>
+                        <p>Participated in the AICTE Virtual Internship program at MotionCut, , focusing on developing
+                            web
+                            applications and enhancing user interfaces.</p>
+                    </div>
+                    <div class="achievement-box">
+                        <img src="cert2.png" alt="Certificate 2">
+                        <h4>Course Completion</h4>
+                        <p>Completed the course by Dr. Angela Yu on Udemy, gaining proficiency in full-stack web
+                            development,
+                            including HTML, CSS, JavaScript, Node.js, Express, and MongoDB.</p>
+                    </div>
+                    <div class="achievement-box">
+                        <img src="cert3.png" alt="Certificate 3">
+                        <h4>Internship</h4>
+                        <p> Completed the 1 month innoventure internship Program conducted by Center of Excellence in
+                            Artificial Intelligence and Machine Learning .</p>
+                    </div>
+                    <div class="achievement-box">
+                        <img src="cert4.png" alt="Certificate 4">
+                        <h4>Achievement</h4>
+                        <p>Team The braille spell. Secured 2nd position in the Prototyping Expo, "Gamers Street 2022."
+                            and in "Envision'22 Expo."</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h3>CHAITHANYA K J</h3>
+            </div>
+            <div class="footer-second">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#projects">Projects and Achievements</a></li>
+                    <li><a href="#" id="connectButton">Connect</a></li>
+                </ul>
+            </div>
+            <div class="footer-third">
+                <ul class="footer-links">
+                    <li><a href="https://github.com/chaithanyakj24" target="_blank">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/chaithanya-k-j-075137229/" target="_blank">LinkedIn</a>
+                    </li>
+                    <li><a href="mailto:chaithanhakj002@gmail.com">Email</a></li>
+                </ul>
+            </div>
+            <div class="footer-fourth">
+                <div class="footer-buttons">
+                    <a href="https://drive.google.com/file/d/19kMLEAvpzT_xGmHpJ_9xoSTbgC3IVs8q/view?usp=drive_link"
+                        target="_blank">Resume</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-rights">
+            Copyright &copy; 2024 Chaithanya K J | All rights reserved.
+        </div>
+    </footer>
+    <!-- Popup Form -->
+    <div id="popupOverlay" class="popup-overlay"></div>
+    <div id="popupForm" class="popup-form">
+        <h2>Connect with Me</h2>
+        <form id="connectForm" method="POST" action="/connect">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer.', 'Frontend Developer.', 'Tech Enthusiast.', 'Web Designer.'],
+            typeSpeed: 60,
+        });
+    </script>
+    <script>
+        const connectButton = document.getElementById('connectButton');
+        const popupOverlay = document.getElementById('popupOverlay');
+        const popupForm = document.getElementById('popupForm');
+
+        connectButton.addEventListener('click', () => {
+            popupOverlay.classList.add('active');
+            popupForm.classList.add('active');
+        });
+
+        popupOverlay.addEventListener('click', () => {
+            popupOverlay.classList.remove('active');
+            popupForm.classList.remove('active');
+        });
+
+        document.getElementById('connectForm').addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            const response = await fetch('/connect', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ name, email, message })
+            });
+
+            if (response.ok) {
+                alert('Your message has been sent successfully!');
+                popupOverlay.classList.remove('active');
+                popupForm.classList.remove('active');
+            } else {
+                alert('There was an error sending your message. Please try again.');
+            }
+        });
+    </script>
+
+</body>
+
+</html>
