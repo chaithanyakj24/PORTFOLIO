@@ -15,7 +15,7 @@ const Home = () => {
 
 
           <p className="text-gray-500 py-4 max-w-md hidden md:block">
-           I am a front-end developer passionate about creating interactive and dynamic user experiences.
+            Is am a front-end developer passionate about creating interactive and dynamic user experiences.
           </p>
           <div className="hidden md:block">
             <a href="https://drive.google.com/file/d/19kMLEAvpzT_xGmHpJ_9xoSTbgC3IVs8q/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
